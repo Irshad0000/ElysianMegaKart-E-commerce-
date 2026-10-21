@@ -1,0 +1,181 @@
+/* Sticky footer layout fix */
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer.modern-footer {
+  margin-top: auto !important;
+}
+/* ===== FOOTER STYLING (matched to header) ===== */
+
+footer.modern-footer {
+  background: linear-gradient(135deg, #2d3748 0%, #1f2937 100%);
+  color: #e0e0e0;
+  padding: 60px 0 0 0;
+}
+
+/* Force readable text color on dark footer (fallback for conflicting rules) */
+footer.modern-footer,
+footer.modern-footer p,
+footer.modern-footer h6,
+footer.modern-footer small,
+footer.modern-footer li,
+footer.modern-footer a,
+footer.modern-footer .footer-link {
+  color: #e0e0e0 !important;
+}
+
+/* Container text */
+footer.modern-footer p,
+footer.modern-footer .text-muted,
+footer.modern-footer li {
+  color: rgba(224, 224, 224, 0.85);
+}
+
+/* Brand icon color consistent with header */
+footer.modern-footer .fa-cart-shopping {
+  color: #00d4ff;
+}
+
+/* target only footer logo icon added in markup */
+footer .logo-icon {
+  color: #00d4ff !important;
+}
+
+/* Social Icons - subtle, matching header hover */
+footer .footer-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #e0e0e0;
+  border-radius: 50%;
+  transition: all 0.28s ease;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+footer .footer-icon:hover {
+  transform: translateY(-4px) scale(1.03);
+  background: rgba(0, 212, 255, 0.06);
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.18);
+}
+
+/* Individual brand color accents on hover */
+footer .footer-icon.facebook:hover {
+  color: #3b5998;
+  background: rgba(59, 89, 152, 0.06);
+}
+footer .footer-icon.twitter:hover {
+  color: #1da1f2;
+  background: rgba(29, 161, 242, 0.06);
+}
+footer .footer-icon.x-twitter:hover {
+  color: #111111;
+  background: rgba(17, 17, 17, 0.08);
+}
+footer .footer-icon.instagram:hover {
+  color: #c13584;
+  background: rgba(193, 53, 132, 0.06);
+}
+footer .footer-icon.youtube:hover {
+  color: #ff0000;
+  background: rgba(255, 0, 0, 0.06);
+}
+footer .footer-icon.whatsapp:hover {
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+/* Links */
+footer .footer-link {
+  display: block;
+  color: rgba(224, 224, 224, 0.85);
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: all 0.25s ease;
+}
+
+footer .footer-link:hover {
+  color: #00d4ff;
+  padding-left: 6px;
+}
+
+/* Newsletter: match header search style */
+footer form input[type="email"] {
+  border-radius: 25px 0 0 25px;
+  padding: 10px 16px;
+  border: 2px solid rgba(0, 212, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: #e0e0e0;
+  outline: none;
+}
+
+footer form input::placeholder {
+  color: #9aa4ad;
+}
+
+footer form button {
+  border-radius: 0 25px 25px 0;
+  padding: 9px 14px;
+  border: none;
+  background: linear-gradient(90deg, #00d4ff, #ff6b9d);
+  color: #fff;
+  transition: transform 0.18s ease;
+}
+
+footer form button:hover {
+  transform: translateY(-2px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25));
+  border-top: 1px solid rgba(0, 212, 255, 0.06);
+  margin-top: 30px;
+}
+
+.footer-bottom .container {
+  padding: 14px 0;
+}
+
+.footer-bottom small {
+  color: rgba(200, 200, 200, 0.7);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  footer.modern-footer {
+    padding: 40px 0 0 0;
+  }
+
+  footer .footer-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  footer form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer form input,
+  footer form button {
+    width: 100%;
+    border-radius: 25px;
+  }
+}
+
